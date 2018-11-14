@@ -1,0 +1,86 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/jquery-2.2.4.min.js"></script>
+    <link href="/main.css" rel="stylesheet" />
+    <script>
+        alert("gdj");
+        $(document).ready(function () {
+            $(".five").click(function () {
+                $(".five~span,.five").css("color", "#00ff90");
+            })
+            $(".four").click(function () {
+                $(".five").css("color", "#aaa");
+                $(".five~span").css("color", "#b6ff00")
+            })
+            $(".three").click(function () {
+                $(".four,.five").css("color", "#aaa");
+                $(".four~span").css("color", "#b6ff00")
+            })
+            $(".two").click(function () {
+                $(".three,.four,.five").css("color", "#aaa");
+                $(".three~span").css("color", "#b6ff00")
+            })
+            $(".one").click(function () {
+                $("span").css("color", "#aaa");
+                $(".one").css("color", "#b6ff00")
+            })
+        })
+
+    </script>
+    <style type="text/css">
+        section {
+            margin: 50px auto;
+            display: table;
+        }
+
+        .item span {
+            color: #aaa;
+            float: right; /******/
+            padding: 5px;
+            font-size: 25px;
+            display: table-cell;
+        }
+
+            .item span.five:hover,
+            .item span.five:hover ~ span {
+                color: #00ff90 !important;
+            }
+
+            .item span.four:hover,
+            .item span.four:hover ~ span {
+                color: #b6ff00 !important;
+            }
+
+            .item span.three:hover,
+            .item span.three:hover ~ span {
+                color: #ffd800 !important;
+            }
+
+            .item span.two:hover,
+            .item span.two:hover ~ span {
+                color: #ff6a00 !important;
+            }
+
+            .item span.one:hover,
+            .item span.one:hover ~ span {
+                color: #ff0000 !important;
+            }
+    </style>
+</head>
+<body>
+    <section class="item">
+        <!--<input type="radio" id="star5" value="5" hidden/>-->
+        <span class="five fa fa-star-half-o"></span>
+        <!--<input type="radio" id="star4" value="4" hidden/>-->
+        <span class="four fa fa-star-half-o"></span>
+        <!--<input type="radio" id="star3" value="3" hidden/>-->
+        <span class="three fa fa-star-half-o"></span>
+        <!--<input type="radio" id="star2" value="2" hidden/>-->
+        <span class="two fa fa-star-half-o"></span>
+        <!--<input type="radio" id="star1" value="1" hidden/>-->
+        <span class="one fa fa-star-half-o"></span>
+    </section>
+</body>
+</html>
